@@ -97,7 +97,7 @@ define([
         // result in the loading spinner not disappearing after the update.
         doUpdate: function(done) {
             this.savedSearchPromise = this.savedSearchModel.fetch()
-                .then(function() {
+                .done(function() {
                     this.queryModel = this.savedSearchModel
                         .toQueryModel(IdolIndexesCollection, false);
 
@@ -105,7 +105,7 @@ define([
                         ? $.when()
                         : (this.widgetInitializePromise = $.when(this.postInitialize()));
                 }.bind(this))
-                .then(function() {
+                .done(function() {
                     this.hasInitialized = true;
                     return this.updatePromise = this.getData();
                 }.bind(this))

@@ -58,7 +58,7 @@ define([
             };
 
             return trendingStrategy.fetchField(fetchOptions)
-                .then(function(selectedFieldValues) {
+                .done(function(selectedFieldValues) {
                     if(selectedFieldValues.length === 0) {
                         return $.when();
                     } else {
@@ -71,7 +71,7 @@ define([
                             });
                         } else {
                             rangePromise = trendingStrategy.fetchRange(selectedFieldValues, fetchOptions)
-                                .then(function(range) {
+                                .done(function(range) {
                                     let currentMax = moment(this.widgetSettings.maxDate
                                         ? this.widgetSettings.maxDate
                                         : range.max);
@@ -91,7 +91,7 @@ define([
                                 }.bind(this));
                         }
 
-                        return rangePromise.then(function(range) {
+                        return rangePromise.done(function(range) {
                             this.currentMin = range.currentMin;
                             this.currentMax = range.currentMax;
 

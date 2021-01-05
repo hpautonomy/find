@@ -353,15 +353,15 @@ define([
                 if(widget.view.exportData) {
                     // Check for error first, as failed fetches produce empty widgets
                     if(hasError) {
-                        reports.push($.when(errorReport).then(exportCallback));
+                        reports.push($.when(errorReport).done(exportCallback));
                     } else if(isEmpty) {
-                        reports.push($.when(emptyReport).then(exportCallback));
+                        reports.push($.when(emptyReport).done(exportCallback));
                     } else {
                         const data = widget.view.exportData();
 
                         // this may be a promise, or an actual object
                         if(data) {
-                            reports.push($.when(data).then(exportCallback));
+                            reports.push($.when(data).done(exportCallback));
                         }
                     }
                 }

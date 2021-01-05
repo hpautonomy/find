@@ -67,7 +67,7 @@ define([
                         }, origData);
 
                         return $.ajax({url: 'api/public/parametric/values', traditional: true, data: data})
-                            .then(function(response) {
+                            .done(function(response) {
                                 return {
                                     totalValues: response[0] ? response[0].totalValues : 0,
                                     values: response[0] ? response[0].values : []

@@ -61,7 +61,7 @@ define([
                     ? _.pluck(options.values, 'name')
                     : null
             }
-        }).then(function(fieldList) {
+        }).done(function(fieldList) {
             const field = fieldList.filter(function(fieldData) {
                 return fieldData.id === options.field;
             }, this);
@@ -125,7 +125,7 @@ define([
                     }
                 });
 
-            const promise = xhr.then(function(data) {
+            const promise = xhr.done(function(data) {
                 return _.extend(data, {
                     min: moment(data.min),
                     max: moment(data.max),

@@ -334,7 +334,7 @@ define([
             };
 
             $.when(trendingStrategy.fetchField(fetchOptions))
-                .then(function(values) {
+                .done(function(values) {
                     this.selectedFieldValues = values;
 
                     if(this.selectedFieldValues.length === 0) {
@@ -342,7 +342,7 @@ define([
                         return $.when();
                     } else {
                         return $.when(trendingStrategy.fetchRange(this.selectedFieldValues, fetchOptions))
-                            .then(function(data) {
+                            .done(function(data) {
                                 this.setMinMax(moment(data.min), moment(data.max));
                                 // We need to explicitly update the chart and fetch the data.
                                 // The code previously assumed setMinMax would do it via the change event listeners,

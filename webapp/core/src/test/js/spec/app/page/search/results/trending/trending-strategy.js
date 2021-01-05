@@ -159,7 +159,7 @@ define([
 
                 it('has returned a promise that contains the correct information', function() {
                     let fetchResult = null;
-                    this.fieldResult.then(function(result) {
+                    this.fieldResult.done(function(result) {
                         fetchResult = result;
                     });
                     expect(fetchResult).toEqual([]);
@@ -173,7 +173,7 @@ define([
 
                 it('has returned a promise that contains the correct information', function() {
                     let fetchResult = null;
-                    this.fieldResult.then(function(result) {
+                    this.fieldResult.done(function(result) {
                         fetchResult = result;
                     });
                     expect(fetchResult).toEqual(this.fetchData[0].values);
@@ -214,7 +214,7 @@ define([
 
                 it('has returned a promise that contains the correct information', function() {
                     let rangeResult = null;
-                    this.rangeResult.then(function(result) {
+                    this.rangeResult.done(function(result) {
                         rangeResult = result;
                     });
                     expect(rangeResult).toEqual(this.rangeFetchData);
@@ -265,7 +265,7 @@ define([
 
                 it('returns the bucketed value data', function() {
                     let bucketedResult = null;
-                    this.bucketedResult.then(function() {
+                    this.bucketedResult.done(function() {
                         bucketedResult = Array.prototype.slice.call(arguments);
                     });
                     expect(bucketedResult).toHaveLength(3);

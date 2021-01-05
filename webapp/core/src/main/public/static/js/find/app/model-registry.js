@@ -48,7 +48,7 @@ define([
 
             if (data.fetch !== false) {
                 data.fetchPromise = $.when.apply($, dependencyPromises)
-                    .then(function() {
+                    .done(function() {
                         return data.instance.fetch(data.fetchOptions || undefined);
                     });
             }

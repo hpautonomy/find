@@ -77,7 +77,7 @@ define([
 
         exportData: function() {
             return this.mapResultsViewStrategy.mapView.exportData()
-                .then(function(data) {
+                .done(function(data) {
                     return {
                         data: data,
                         type: 'map'

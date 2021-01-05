@@ -22,6 +22,7 @@ define([
     'use strict';
 
     return Widget.extend({
+        className: 'panel-group',
         widgetTemplate: _.template(widgetTemplate),
         template: _.template(template),
 

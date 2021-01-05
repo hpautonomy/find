@@ -53,7 +53,7 @@ define([
                 }
             });
 
-            return deferred.then(function(data){
+            return deferred.done(function(data){
                 return data && {
                         data: {
                             image: data,

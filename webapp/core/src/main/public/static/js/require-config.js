@@ -31,7 +31,7 @@ require.config({
         iCheck: '../bower_components/iCheck/icheck',
         chosen: '../bower_components/chosen/chosen.jquery',
         metisMenu: '../bower_components/metisMenu/dist/metisMenu',
-        jquery: '../bower_components/jquery/jquery',
+        jquery: '../bower_components/jquery/dist/jquery',
         'js-whatever': '../bower_components/hp-autonomy-js-whatever/src',
         json2: '../bower_components/json/json2',
         'login-page': '../bower_components/hp-autonomy-login-page/src',
