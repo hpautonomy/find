@@ -46,7 +46,7 @@ require.config({
         'leaflet.notransform': 'leaflet.notransform/leaflet.notransform',
         moment: '../bower_components/moment/moment',
         'moment-timezone-with-data': '../bower_components/moment-timezone/builds/moment-timezone-with-data',
-        Raphael: '../bower_components/raphael/raphael',
+        Raphael: 'raphael/raphael',
         settings: '../bower_components/hp-autonomy-settings-page/src',
         slider: '../bower_components/seiyria-bootstrap-slider/dist',
         text: '../bower_components/requirejs-text/text',
